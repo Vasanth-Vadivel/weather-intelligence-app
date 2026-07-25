@@ -1,39 +1,34 @@
-# Weather Intelligence Web App
+# 🌤️ Weather Intelligence App
 
-A modern, fast, and static Single Page Application (SPA) designed to provide weather intelligence. This app is built with React, Vite, and Tailwind CSS. It connects to the open, keyless Open-Meteo APIs for accurate geocoding and weather forecasts without requiring any API keys.
+A modern, responsive Single Page Application (SPA) providing real-time weather analytics, 7-day forecasting, dynamic temperature trend visualizers, and smart planning recommendations. Built with React, Vite, Tailwind CSS, and Lucide React icons.
 
-## Features
+---
 
-- **City Search:** Easily find weather conditions for any city worldwide.
-- **Current Conditions:** Displays temperature, wind speed, and current weather status.
-- **7-Day Forecast:** Detailed daily forecasts including maximum and minimum temperatures, and precipitation.
-- **Weather Chart:** Visual trend of temperatures over the upcoming week using Recharts.
-- **Smart Recommendations:** Real-time advice on what to expect based on upcoming weather data.
+## 🌟 Key Features
 
-## Project Structure
+- **Dynamic City Search & Autocomplete**: Real-time city suggestions using Open-Meteo Geocoding API.
+- **Current Weather Dashboard**: Displays temperature (°C/°F), wind speed, relative humidity, pressure, and feels-like metrics.
+- **7-Day Forecast Grid**: Weather code icons, daily max/min temperatures, and precipitation totals (mm).
+- **Interactive Temperature Trend Chart**: Visual dual-line trend tracking daily high and low temperatures with hover tooltips.
+- **Smart Planning Recommendations**: Dynamic practical tips for outfits, outdoor activities, and travel weather alerts based on forecasts.
+- **Robust Error Handling**: Clean error banners for invalid city queries or API downtime without breaking UI.
 
-- `src/App.tsx`: Main application file managing state and API integrations.
-- `src/utils.ts`: Helper functions for weather codes and recommendations.
-- `src/types.ts`: TypeScript definitions for the Open-Meteo responses.
-- `src/components/`: Reusable React components for the UI.
+---
 
-## Getting Started
+## 🔌 API Integrations (Public & Keyless)
 
-### Local Development
+This application uses public Open-Meteo APIs (no API keys required):
 
-1. Install dependencies:
+- **Geocoding API**: `https://geocoding-api.open-meteo.com/v1/search?name={city}&count=5&language=en&format=json`
+- **Forecast API**: `https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current_weather=true&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto`
+
+---
+
+## 🚀 Local Development Setup
+
+To run this project locally:
+
+1. **Clone the repository:**
    ```bash
-   npm install
-   ```
-2. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-### Building for Production (Cloudflare Pages)
-
-1. Run the build script to generate the static files:
-   ```bash
-   npm run build
-   ```
-2. The static site will be output in the `dist` directory. This folder can be directly uploaded to static hosting services like Cloudflare Pages, Vercel, or Netlify.
+   git clone [https://github.com/Vasanth-Vadivel/weather-intelligence-app.git](https://github.com/Vasanth-Vadivel/weather-intelligence-app.git)
+   cd weather-intelligence-app
